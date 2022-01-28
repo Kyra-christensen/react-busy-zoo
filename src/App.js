@@ -6,7 +6,7 @@ import Sign from './Sign';
 function App() {
   const [lionSize, setLionSize] = useState(5);
   const [tigerSize, setTigerSize] = useState(5);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState('false');
   const [animalsArray, setAnimalsArray] = useState(['camel', 'monkey']);
 
   return (
@@ -28,6 +28,10 @@ function App() {
         </div>
       </div>
       <Sign sign={isOpen} />
+      <div className='buttons'>
+        <button onClick={() => setIsOpen('true')}>Open</button>
+        <button onClick={() => setIsOpen('false')}>Closed</button>
+      </div>
     </div>
   );
 }

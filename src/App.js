@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <div className='fight'> 
-        <div className='animal'>
+        <div className='animal-fight'>
           <p style={{ fontSize:(lionSize * 5) }}>🦁</p>  
           <div className='buttons'>
             <button onClick={() => setLionSize(lionSize + 1)}>The Lion is getting ready to charge!</button>

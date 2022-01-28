@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { animalArray } from './AnimalList';
+import AnimalList from './AnimalList';
 import Sign from './Sign';
 
 function App() {
@@ -31,6 +31,13 @@ function App() {
       <div className='buttons'>
         <button onClick={() => setIsOpen(true)}>Open</button>
         <button onClick={() => setIsOpen(false)}>Closed</button>
+      </div>
+      <AnimalList animals={animalsArray} />
+      <div className='buttons'>
+        <button onClick={() => setAnimalsArray([...animalsArray, 'camel'])}>Camel</button>
+        <button onClick={() => setAnimalsArray([...animalsArray, 'monkey'])}>Monkey</button>
+        <button onClick={() => setAnimalsArray([...animalsArray, 'giraffe'])}>Giraffe</button>
+        <button onClick={() => setAnimalsArray([...animalsArray, 'elephant'])}>Elephant</button>
       </div>
     </div>
   );

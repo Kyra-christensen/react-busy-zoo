@@ -28,12 +28,12 @@ function App() {
         </div>
       </div>
       <Sign isOpen={isOpen} />
-      <div className='buttons'>
-        <button onClick={() => setIsOpen(true)} className='open'>Open</button>
-        <button onClick={() => setIsOpen(false)} className='closed'>Closed</button>
+      <div className='open-buttons'>
+        <button onClick={() => setIsOpen(true)} >Open</button>
+        <button onClick={() => setIsOpen(false)} >Closed</button>
       </div>
       <AnimalList animals={animalsArray} />
-      <div className='buttons'>
+      <div className='animal-buttons'>
         <button onClick={() => setAnimalsArray([...animalsArray, 'camel'])}>Camel</button>
         <button onClick={() => setAnimalsArray([...animalsArray, 'zebra'])}>Zebra</button>
         <button onClick={() => setAnimalsArray([...animalsArray, 'giraffe'])}>Giraffe</button>

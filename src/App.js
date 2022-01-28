@@ -4,6 +4,9 @@ import { useState } from 'react';
 function App() {
   const [lionSize, setLionSize] = useState(5);
   const [tigerSize, setTigerSize] = useState(5);
+  const [isOpen, setIsOpen] = useState(false);
+  const [animalsArray, setAnimalsArray] = useState(['camel', 'monkey']);
+
   return (
     <div className="App">
       <div className='fight'> 

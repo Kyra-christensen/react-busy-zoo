@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [lionSize, setLionSize] = useState(5);
+  const [tigerSize, setTigerSize] = useState(5);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='fight'> 
+        <div className='animal'>
+          <p style={{ fontSize:(lionSize * 5) }}>🦁</p>  
+          <div className='buttons'>
+            <button onClick={() => setLionSize(lionSize + 1)}>The Lion is getting ready to charge!</button>
+            <button onClick={() => setTigerSize(tigerSize - 1)}>The Lion attacks the Tiger</button>
+          </div>
+        </div>
+        <div className='animal'>
+          <p style={{ fontSize:(tigerSize * 5) }}>🐯</p>
+          <div className='buttons'>
+            <button onClick={() => setTigerSize(tigerSize + 1)}>The Tiger is getting ready to attack!</button>
+            <button onClick={() => setLionSize(lionSize - 1)}>The Tiger attacks the Lion</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

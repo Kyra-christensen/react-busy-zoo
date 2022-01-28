@@ -1,5 +1,7 @@
 import './App.css';
 import { useState } from 'react';
+import { animalArray } from './AnimalList';
+import Sign from './Sign';
 
 function App() {
   const [lionSize, setLionSize] = useState(5);
@@ -25,6 +27,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Sign sign={isOpen} />
     </div>
   );
 }

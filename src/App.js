@@ -7,7 +7,7 @@ function App() {
   const [lionSize, setLionSize] = useState(5);
   const [tigerSize, setTigerSize] = useState(5);
   const [isOpen, setIsOpen] = useState(true);
-  const [animalsArray, setAnimalsArray] = useState(['camel', 'monkey']);
+  const [animalsArray, setAnimalsArray] = useState(['camel', 'zebra']);
 
   return (
     <div className="App">

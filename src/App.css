@@ -74,12 +74,16 @@ body, #root, .App {
     justify-content: center;
     align-items: center;
     height: 200px;
-    margin:40px;
-    width:90%;
-    
+    margin-bottom: 15px;
+    width:100%;
+    background-color: cornflowerblue;
 }
 
 .buttons {
     margin: 10px;
+    
+}
+
+.animal-fight {
     
 }

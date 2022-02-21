@@ -1,8 +1,16 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders closed zoo button', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Camel/i);
-  expect(linkElement).toBeInTheDocument();
+  const closedZooButton = screen.getByText(/Closed/i);
+  expect(closedZooButton).toBeInTheDocument();
+  fireEvent.click(closedZooButton);
+});
+
+test('renders camel button', () => {
+  render(<App />);
+  const camelButton = screen.getByText(/Camel/i);
+  expect(camelButton).toBeInTheDocument();
+  fireEvent.click(camelButton);
 });
